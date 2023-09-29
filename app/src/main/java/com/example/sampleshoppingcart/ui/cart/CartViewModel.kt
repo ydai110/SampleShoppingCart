@@ -90,8 +90,9 @@ class CartViewModel : ViewModel() {
             if (cache.size == 1) {
                 cache.clear()
             }
-
-            _allOrderProductsState.value = OrderProductsState.Success(cache)
+            val newPost = mutableListOf<CartItem>()
+            newPost.addAll(cache)
+            _allOrderProductsState.value = OrderProductsState.Success(newPost)
         }
     }
 
