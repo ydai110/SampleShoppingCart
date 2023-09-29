@@ -1,0 +1,81 @@
+{
+  "products": [
+    {
+      "SKU": "H001",
+      "ProductName": "Espresso",
+      "Description": "A concentrated coffee brewed by forcing steam through ground coffee beans.",
+      "Price": 2.50,
+      "ImageName": "espresso.png"
+    },
+    {
+      "SKU": "H002",
+      "ProductName": "Americano",
+      "Description": "A strong coffee made by pouring hot water over espresso.",
+      "Price": 3.00,
+      "ImageName": "americano.png"
+    },
+    {
+      "SKU": "H003",
+      "ProductName": "Latte",
+      "Description": "Espresso with steamed milk.",
+      "Price": 4.00,
+      "ImageName": "latte.png"
+    },
+    {
+      "SKU": "H004",
+      "ProductName": "Cappuccino",
+      "Description": "Espresso mixed with steamed milk and topped with foam.",
+      "Price": 4.00,
+      "ImageName": "cappuccino.png"
+    },
+    {
+      "SKU": "H005",
+      "ProductName": "Vanilla Latte",
+      "Description": "Latte flavored with vanilla.",
+      "Price": 4.50,
+      "ImageName": "vanilla_latte.png"
+    },
+    {
+      "SKU": "H006",
+      "ProductName": "Honey Rose Yuzu",
+      "Description": "A unique blend of honey, rose, and yuzu flavors.",
+      "Price": 4.50,
+      "ImageName": "honeyroseyuzu.png"
+    },
+    {
+      "SKU": "C001",
+      "ProductName": "Iced Espresso",
+      "Description": "Espresso served over ice.",
+      "Price": 3.00,
+      "ImageName": "iced_espresso.png"
+    },
+    {
+      "SKU": "C002",
+      "ProductName": "Iced Americano",
+      "Description": "Americano served over ice.",
+      "Price": 3.50,
+      "ImageName": "iced_americano.png"
+    },
+    {
+      "SKU": "C003",
+      "ProductName": "Iced Latte",
+      "Description": "Latte served over ice.",
+      "Price": 4.50,
+      "ImageName": "iced_latte.png"
+    },
+    {
+      "SKU": "C004",
+      "ProductName": "Iced Cappuccino",
+      "Description": "Cappuccino served over ice.",
+      "Price": 4.50,
+      "ImageName": "iced_cappuccino.png"
+    },
+    {
+      "SKU": "C004",
+      "ProductName": "Iced Vanilla Latte",
+      "Description": "Vanilla-flavored latte served over ice.",
+      "Price": 5.00,
+      "ImageName": "icedvanillalatte.png"
+    }
+  ]
+}
