@@ -1,6 +1,7 @@
 # SampleShoppingCart
 ##
-Use Moshi + Coroutine Flow
+Use Moshi + Coroutine Flow + sharedPrefs
+All data stored in the local, to avoid disapperence of cart page data when relaunch.
 
 ## Screenshots
 
