@@ -3,7 +3,7 @@ package com.example.sampleshoppingcart.ui.home
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.sampleshoppingcart.data.CartItem
+import com.example.sampleshoppingcart.data.OrderProduct
 import com.example.sampleshoppingcart.data.Product
 import com.example.sampleshoppingcart.data.ProductResponse
 import com.example.sampleshoppingcart.util.SharedPreferencesManager
@@ -44,13 +44,13 @@ class HomeViewModel : ViewModel() {
             orderProductsList?.let { it ->
                 val productList = it.productList
                 if (productList.isEmpty()) {
-                    productList.add(CartItem.OrderProduct(product, 1))
+                    productList.add(OrderProduct(product, 1))
                 } else {
                     val matchingIndex = productList.indexOfFirst { orderProduct ->
                         orderProduct.product.skuId == product.skuId
                     }
                     if (matchingIndex == -1) {
-                        productList.add(CartItem.OrderProduct(product, 1))
+                        productList.add(OrderProduct(product, 1))
                     } else {
                         productList[matchingIndex].quantity += 1
                     }

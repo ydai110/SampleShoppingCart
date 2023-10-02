@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,7 +24,7 @@ class CartFragment : Fragment() {
 
     private val binding get() = _binding!!
 
-    private lateinit var cartViewModel: CartViewModel
+    private val cartViewModel: CartViewModel by viewModels()
 
     private lateinit var recyclerView: RecyclerView
 
@@ -37,8 +37,6 @@ class CartFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        cartViewModel =
-            ViewModelProvider(this)[CartViewModel::class.java]
 
         _binding = FragmentCartBinding.inflate(inflater, container, false)
         val root: View = binding.root

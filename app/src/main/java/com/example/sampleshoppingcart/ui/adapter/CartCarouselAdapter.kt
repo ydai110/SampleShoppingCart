@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.sampleshoppingcart.R
 import com.example.sampleshoppingcart.data.CartItem
+import com.example.sampleshoppingcart.data.OrderProduct
+import com.example.sampleshoppingcart.data.SummaryItem
 import com.example.sampleshoppingcart.mapToDrawableId
 import com.google.android.material.button.MaterialButton
 
@@ -79,11 +81,11 @@ class CartCarouselAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder.itemViewType) {
             PRODUCT_ITEM_VIEWTYPE -> {
-                val orderProduct = cartItems[position] as CartItem.OrderProduct
+                val orderProduct = cartItems[position] as OrderProduct
                 bindProductViewHolder(holder as ProductItemViewHolder, orderProduct, position)
             }
             SUMMARY_VIEWTYPE -> {
-                val summaryItem = cartItems[position] as CartItem.SummaryItem
+                val summaryItem = cartItems[position] as SummaryItem
                 bindSummaryViewHolder(holder as SummaryViewHolder, summaryItem)
             }
         }
@@ -92,7 +94,7 @@ class CartCarouselAdapter(
 
     private fun bindProductViewHolder(
         holder: ProductItemViewHolder,
-        orderProduct: CartItem.OrderProduct,
+        orderProduct: OrderProduct,
         position: Int
     ) {
         holder.productTitle.text = orderProduct.product.productName
@@ -123,7 +125,7 @@ class CartCarouselAdapter(
 
     private fun bindSummaryViewHolder(
         holder: SummaryViewHolder,
-        summaryItem: CartItem.SummaryItem
+        summaryItem: SummaryItem
     ) {
         holder.totalPrice.text = summaryItem.totalPrice.toString()
         holder.discountPrice.text = summaryItem.discountPrice.toString()
@@ -133,8 +135,8 @@ class CartCarouselAdapter(
 
     override fun getItemViewType(position: Int): Int {
         return when (cartItems[position]) {
-            is CartItem.OrderProduct -> PRODUCT_ITEM_VIEWTYPE
-            is CartItem.SummaryItem -> SUMMARY_VIEWTYPE
+            is OrderProduct -> PRODUCT_ITEM_VIEWTYPE
+            is SummaryItem -> SUMMARY_VIEWTYPE
         }
     }
 
